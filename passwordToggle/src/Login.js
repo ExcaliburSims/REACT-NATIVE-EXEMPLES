@@ -1,5 +1,6 @@
 import {View, Text, Dimensions, StyleSheet} from 'react-native';
 import React from 'react';
+import Icon from 'react-native-vector-icons/Entypo';
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
@@ -10,7 +11,9 @@ const Login = () => {
         <Text>Yando</Text>
       </View>
       <View style={styles.box2}>
-        <Text>Zil</Text>
+        <Icon name="twitter-with-circle" size={40} color="blue" />
+        <Icon name="linkedin-with-circle" size={40} color="blue" />
+        <Icon name="facebook-with-circle" size={40} color="blue" />
       </View>
     </View>
   );
@@ -30,7 +33,11 @@ const styles = StyleSheet.create({
   },
   box2: {
     flex: 1,
-    borderTopEndRadius: 50,
-    borderTopStartRadius: 50,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    /* borderTopEndRadius: 50,
+		borderTopStartRadius: 50, */
+    backgroundColor: 'green',
+    width: '50%',
   },
 });
