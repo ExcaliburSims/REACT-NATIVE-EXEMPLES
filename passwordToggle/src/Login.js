@@ -10,10 +10,7 @@ const Login = () => {
         <Text>Yando</Text>
       </View>
       <View style={styles.box2}>
-        <Text>Yando</Text>
-      </View>
-      <View style={styles.box3}>
-        <Text>Zilu</Text>
+        <Text>Zil</Text>
       </View>
     </View>
   );
@@ -23,22 +20,16 @@ export default Login;
 const styles = StyleSheet.create({
   layout: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: '#1F172F',
   },
   box1: {
-    flex: 1,
-    backgroundColor: 'green',
+    flex: 5,
+    backgroundColor: 'white',
     borderBottomLeftRadius: 100,
+    borderBottomRightRadius: 100,
   },
   box2: {
-    flex: 3,
-    backgroundColor: 'red',
-    height: 100,
-  },
-  box3: {
     flex: 1,
-    backgroundColor: 'blue',
-    //borderBottomLeftRadius: 15,
     borderTopEndRadius: 50,
     borderTopStartRadius: 50,
   },
