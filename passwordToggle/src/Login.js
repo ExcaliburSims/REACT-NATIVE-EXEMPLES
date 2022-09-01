@@ -1,4 +1,11 @@
-import {View, Text, Dimensions, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  Dimensions,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Entypo';
 
@@ -11,9 +18,24 @@ const Login = () => {
         <Text>Yando</Text>
       </View>
       <View style={styles.box2}>
-        <Icon name="twitter-with-circle" size={40} color="blue" />
-        <Icon name="linkedin-with-circle" size={40} color="blue" />
-        <Icon name="facebook-with-circle" size={40} color="blue" />
+        <TouchableOpacity>
+          <Image
+            source={require('./assets/img/icons8-facebook-nouveau-192(-xxxhdpi).png')}
+            style={styles.Image}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Image
+            source={require('./assets/img/icons8-logo-google-192(-xxxhdpi).png')}
+            style={styles.Image}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Image
+            source={require('./assets/img/icons8-linkedin-entouré-192(-xxxhdpi).png')}
+            style={styles.Image}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -33,11 +55,15 @@ const styles = StyleSheet.create({
   },
   box2: {
     flex: 1,
+    alignItems: 'center',
     flexDirection: 'row',
-    justifyContent: 'center',
-    /* borderTopEndRadius: 50,
-		borderTopStartRadius: 50, */
-    backgroundColor: 'green',
+    marginLeft: width / 4,
+    //backgroundColor: 'green',
     width: '50%',
+    justifyContent: 'space-between',
+  },
+  Image: {
+    width: 50,
+    height: 50,
   },
 });
