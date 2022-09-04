@@ -10,6 +10,7 @@ import {
   Platform,
   TouchableWithoutFeedback,
   Keyboard,
+  SafeAreaView,
 } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -18,25 +19,24 @@ const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
 const Login = () => {
   return (
-    <KeyboardAvoidingView
+    <SafeAreaView
       /* behavior={Platform.OS === 'android' ? 'padding' : 'height'} */
       style={styles.layout}>
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={styles.box1}>
-          <TextInput
-            placeholder="Password"
+      <TextInput
+        placeholder="Password"
+        // eslint-disable-next-line prettier/prettier
             style={styles.textInput}
-            placeholderTextColor={'#88888888'}
-          />
-          <Icon
-            name="ios-eye-outline"
-            size={30}
-            color="#88888888"
-            style={styles.icone}
-          />
-        </View>
-      </TouchableWithoutFeedback>
-      <View style={styles.box2}>
+        placeholderTextColor={'#88888888'}
+      />
+      <Icon
+        name="ios-eye-outline"
+        size={30}
+        color="#88888888"
+        style={styles.icone}
+      />
+      {/* <View style={styles.box1}>
+      </View> */}
+      {/* <View style={styles.box2}>
         <TouchableOpacity>
           <Image
             source={require('./assets/img/icons8-facebook-nouveau-192(-xxxhdpi).png')}
@@ -55,8 +55,8 @@ const Login = () => {
             style={styles.Image}
           />
         </TouchableOpacity>
-      </View>
-    </KeyboardAvoidingView>
+      </View> */}
+    </SafeAreaView>
   );
 };
 
@@ -64,10 +64,14 @@ export default Login;
 const styles = StyleSheet.create({
   layout: {
     flex: 1,
-    backgroundColor: '#1F172F',
+    //backgroundColor: '#1F172F',
+    backgroundColor: 'white',
+    paddingTop: 200,
+    //justifyContent: 'center',
+    alignItems: 'center',
   },
   box1: {
-    flex: 3,
+    //flex: 3,
     backgroundColor: 'white',
     borderBottomLeftRadius: 100,
     borderBottomRightRadius: 100,
@@ -101,6 +105,6 @@ const styles = StyleSheet.create({
   icone: {
     position: 'absolute',
     right: 70,
-    top: '44%',
+    top: '40%',
   },
 });
