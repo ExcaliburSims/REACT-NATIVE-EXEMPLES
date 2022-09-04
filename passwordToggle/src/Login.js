@@ -19,13 +19,10 @@ const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
 const Login = () => {
   return (
-    <SafeAreaView
-      /* behavior={Platform.OS === 'android' ? 'padding' : 'height'} */
-      style={styles.layout}>
+    <View style={styles.layout}>
       <TextInput
         placeholder="Password"
-        // eslint-disable-next-line prettier/prettier
-            style={styles.textInput}
+        style={styles.textInput}
         placeholderTextColor={'#88888888'}
       />
       <Icon
@@ -56,19 +53,32 @@ const Login = () => {
           />
         </TouchableOpacity>
       </View> */}
-    </SafeAreaView>
+    </View>
   );
 };
 
 export default Login;
 const styles = StyleSheet.create({
   layout: {
-    flex: 1,
+    //flex: 1,
     //backgroundColor: '#1F172F',
-    backgroundColor: 'white',
-    paddingTop: 200,
+    //backgroundColor: 'white',
+    //paddingTop: 200,
     //justifyContent: 'center',
-    alignItems: 'center',
+    //alignItems: 'center',
+    flexDirection: 'row',
+  },
+  textInput: {
+    flex: 1,
+    height: 40,
+    borderColor: '#000',
+    borderBottomWidth: 1,
+    //marginBottom: 36,
+    color: '#000',
+    width: 250,
+    fontSize: 20,
+    //backgroundColor: 'red',
+    paddingHorizontal: 15,
   },
   box1: {
     //flex: 3,
@@ -90,17 +100,6 @@ const styles = StyleSheet.create({
   Image: {
     width: 50,
     height: 50,
-  },
-  textInput: {
-    height: 40,
-    borderColor: '#000',
-    borderBottomWidth: 1,
-    marginBottom: 36,
-    color: '#000',
-    width: 250,
-    fontSize: 20,
-    //backgroundColor: 'red',
-    paddingHorizontal: 15,
   },
   icone: {
     position: 'absolute',
