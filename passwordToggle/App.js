@@ -22,7 +22,7 @@ export default App;
 const styles = StyleSheet.create({
   layout: {
     flex: 1,
-    backgroundColor: '#1F172F',
+    backgroundColor: 'white',
     justifyContent: 'center',
   },
 });
