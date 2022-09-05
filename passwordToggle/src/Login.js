@@ -6,9 +6,6 @@ import {
   Image,
   TouchableOpacity,
   TextInput,
-  KeyboardAvoidingView,
-  Platform,
-  TouchableWithoutFeedback,
   Keyboard,
   SafeAreaView,
 } from 'react-native';
